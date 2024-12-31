@@ -1,0 +1,114 @@
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>
+[type="radio"] {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border: 5px solid white;
+        border-radius: 50%;
+}
+.radio-blue [type="radio"]:checked {
+        background-color: blue !important;
+}
+.radio-gold [type="radio"]:checked {
+        background-color: gold !important;
+}
+.radio-green [type="radio"]:checked {
+        background-color: green !important;
+}
+.radio-red [type="radio"]:checked {
+        background-color: red !important;
+}
+.radio-silver [type="radio"]:checked {
+        background-color: silver !important;
+}
+.radio-black [type="radio"]:checked {
+        background-color: black !important;
+}
+</style>
+<center>
+        <canvas id="canvas" ontouchstart="touchCanvas(window.event, 0)" ontouchend="touchCanvas(window.event, 1)" ontouchmove="touchCanvas(window.event)" width="370" height="530" style="border:1px solid silver"></canvas>
+</center>
+<script src="generator.js"></script>
+<dialog id="dialog0">
+        <center>
+                English<br><input id="input0"></input><br>
+                <input id="input1"></input><br>
+                Korean<br><input id="input2"></input><br>
+                <input id="input3"></input><br>
+                Color<br><input id="inputCol"></input><br>
+                <button onclick="close0()">Enter</button>
+                <button onclick="storage()">Download File</button>
+        </center>
+</dialog>
+<dialog id="dialog1">
+        <center>
+                <h5 id="TitlePointStart"></h5>
+                <span class="radio-blue">
+                        <input type='radio' style="box-shadow: 0 0 0 1px blue;" name='pointStart' value='-1' checked/>
+                </span>
+                <span class="radio-gold">
+                        <input type='radio' style="box-shadow: 0 0 0 1px gold;" name='pointStart' value='0' />
+                </span>
+                <span class="radio-green">
+                        <input type='radio' style="box-shadow: 0 0 0 1px green;" name='pointStart' value='1' />
+                </span>
+                <span class="radio-red">
+                        <input type='radio' style="box-shadow: 0 0 0 1px red;" name='pointStart' value='2' />
+                </span>
+                <span class="radio-silver">
+                        <input type='radio' style="box-shadow: 0 0 0 1px silver;" name='pointStart' value='3' />
+                </span>
+                <span class="radio-black">
+                        <input type='radio' style="box-shadow: 0 0 0 1px black;" name='pointStart' value='#' />
+                </span>
+                <br>
+                <h5 id="TitlePointEnd"></h5>
+                <span class="radio-blue">
+                        <input type='radio' style="box-shadow: 0 0 0 1px blue;" name='pointEnd' value='-1' checked/>
+                </span>
+                <span class="radio-gold">
+                        <input type='radio' style="box-shadow: 0 0 0 1px gold;" name='pointEnd' value='0' />
+                </span>
+                <span class="radio-green">
+                        <input type='radio' style="box-shadow: 0 0 0 1px green;" name='pointEnd' value='1' />
+                </span>
+                <span class="radio-red">
+                        <input type='radio' style="box-shadow: 0 0 0 1px red;" name='pointEnd' value='2' />
+                </span>
+                <span class="radio-silver">
+                        <input type='radio' style="box-shadow: 0 0 0 1px silver;" name='pointEnd' value='3' />
+                </span>
+                <span class="radio-black">
+                        <input type='radio' style="box-shadow: 0 0 0 1px black;" name='pointEnd' value='#' />
+                </span>
+                <br>
+                <h5 id="TitleLine"></h5>
+                <span class="radio-blue">
+                        <input type='radio' style="box-shadow: 0 0 0 1px blue;" name='line' value='1' checked/>
+                </span>
+                <span class="radio-blue">
+                        <input type='radio' style="box-shadow: 0 0 0 1px blue;" name='line' value='-1' />
+                </span>
+                <span class="radio-red">
+                        <input type='radio' style="box-shadow: 0 0 0 1px red;" name='line' value='2' />
+                </span>
+                <span class="radio-red">
+                        <input type='radio' style="box-shadow: 0 0 0 1px red;" name='line' value='-2' />
+                </span>
+                <span class="radio-black">
+                        <input id="NaV0" type='radio' style="box-shadow: 0 0 0 1px black;" name='line' value='#' />
+                </span>
+                <span class="radio-black">
+                        <input id="NaV1" type='radio' style="box-shadow: 0 0 0 1px black;" name='line' value='0' />
+                </span>
+                <span class="radio-silver">
+                        <input type='radio' style="box-shadow: 0 0 0 1px silver;" name='line' value='3' />
+                </span>
+                <span class="radio-green">
+                        <input type='radio' style="box-shadow: 0 0 0 1px green;" name='line' value='-3' />
+                </span>
+                <br>
+                <input id="input"></input><br><button onclick="close1()">Enter</button>
+        </center>
+</dialog>
