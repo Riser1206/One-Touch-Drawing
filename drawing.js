@@ -4,7 +4,7 @@ const Level = location.search.split('?');
 ctx.font = "20px Georgia";
 ctx.textAlign = "center";
 
-fetch('StageMaps/' + Level[1] + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
+fetch('StageMaps/' + Level[1] + '/' + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
 
 function exception($) {
   ctx.fillStyle = Level[1];
