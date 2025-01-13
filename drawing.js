@@ -1,15 +1,14 @@
 const ctx = canvas.getContext('2d');
 Loading = 1;
 const Level = location.search.split('?');
-    ctx.font = "20px Georgia";
-    ctx.textAlign = "center";
+ctx.font = "20px Georgia";
+ctx.textAlign = "center";
 
 fetch('StageMaps/' + Level[1] + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
 
 function exception($) {
-    alert($)
-        ctx.fillStyle = Level[1];
-        ctx.fillText(Level[1] + " World", 185, 26);
+  ctx.fillStyle = Level[1];
+  ctx.fillText(Level[1] + " World", 185, 26);
     for (let y = 0; y < 12; y++) {
         for (let x = 0; x < 9; x++) {
         ctx.beginPath();
@@ -17,16 +16,16 @@ function exception($) {
         ctx.fillStyle = Level[1];
         ctx.fill();
         ctx.fillStyle = "white";
-            const i = 1 + x + 9*y;
+        const i = 1 + x + 9*y;
         ctx.fillText(i, 21 + 41*x, 65 + 41*y);
         ctx.closePath();
-    /*
+  /*
         if (z && ctx.isPointInPath(X0, Y0)) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             resetMap();
             return;
         }
-            */
+  */
         }
     }
 }
