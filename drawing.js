@@ -1,10 +1,10 @@
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext('2d');
 Loading = 1;
 const Level = location.search.split('?');
     ctx.font = "20px Georgia";
     ctx.textAlign = "center";
 
-fetch(Level[1] + Level[2] + ".json").then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
+fetch('StageMaps/' + Level[1] + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
 
 function exception($) {
     alert($)
