@@ -191,13 +191,12 @@ function eventCanvas(x, y, z) {
     return coord;
 }
 
-function drawNumber(stage, world) {
+function drawNumber(title) {
     const Z = document.getElementById("inputCol") == null || document.getElementById("inputCol").value == "";
     ctx.font = "20px Georgia";
     ctx.textAlign = "center";
-    ctx.fillStyle = "White";
-    ctx.fillStyle = world;
-    ctx.fillText(stage, 185, 500);
+    ctx.fillStyle = "Black";
+    ctx.fillText(title, 185, 500);
     ctx.fillStyle = "White";
     ctx.fillStyle = Z ? "black" : document.getElementById("inputCol").value;
     ctx.fillText(Z ? Enter0 : BTS ? document.getElementById("input2").value : document.getElementById("input0").value, 185, 25);
