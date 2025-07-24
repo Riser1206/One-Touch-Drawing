@@ -68,7 +68,7 @@ function drawSection(z, X, Y) {
         if (z == undefined && Coord != undefined && Coord[0] == FileMap.Points[i][0] && Coord[1] == FileMap.Points[i][1]) condition = FileMap.Points[i][2];
     }
     const VAL = document.getElementById("input");
-    drawNumber(VAL.value == "" ? BTS : VAL.value);
+    drawNumber(VAL == null || VAL.value == "" ? BTS : VAL.value);
     
     ctx.beginPath();
     ctx.rect(130-73, 392, 110, 37);
