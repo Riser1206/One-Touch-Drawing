@@ -265,8 +265,7 @@ function storage() {
     if (window._) URL.revokeObjectURL(_);
     _ = objURL;
     const a = document.createElement('a');
-    const Resource = input.value.split("/");
-    a.download = Resource[1]+Resource[0]+'.json';
+    a.download = input.value + '.json';
     a.href = objURL;
     a.click();
 }
