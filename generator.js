@@ -68,9 +68,8 @@ function drawSection(z, X, Y) {
         if (z == undefined && Coord != undefined && Coord[0] == FileMap.Points[i][0] && Coord[1] == FileMap.Points[i][1]) condition = FileMap.Points[i][2];
     }
     const VAL = document.getElementById("input");
-    if (VAL == null || VAL.value == "") drawNumber(1, "blue"); else {
-        const Resource = VAL.value.split("/");
-        drawNumber(Resource[0], Resource[1]);
+    if (VAL == null || VAL.value == "") drawNumber("¤¤¤"); else {
+        drawNumber(VAL.value);
     }
     
     ctx.beginPath();
