@@ -1,7 +1,7 @@
 const ctx = canvas.getContext("2d");
 resetMap();
 
-const BTS = navigator.language == "ko-KR";
+const BTS = navigator.language == "ko";
 const Enter0 = BTS ? "설명" : "Enter";
 const Enter1 = BTS ? "입력" : "Description";
 const Reset = BTS ? "다시 시작" : "Reset";
